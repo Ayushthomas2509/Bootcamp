@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, ">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./File2.css" type="text/css">
+</head>
+<body>
+<header>
+    <nav>
+        <li><span class="a">TO THE NEW</span></li>
+        <li><a class="b">Quick help</a></li>
+        <li><a class="b">Home</a></li>
+    </nav>
+</header>
+
+<!--<br>-->
+<hr>
+
+<div class="c">
+    <h1>Bug Report</h1>
+</div>
+<form id="user">
+    <div class="count">
+
+        <label for="Title">Title*<br>
+            <input type="text" required="required" id="Title">
+        </label>
+        <label for="Description">Description:*<br>
+            <textarea id="Description" form="user"></textarea>
+        </label>
+        <label for="os">Operating System:
+            <br>
+            <select id="os">
+                <option>Windows XP</option>
+                <option>Linux</option>
+                <option>Mac</option>
+            </select>
+        </label>
+        <label for="product">Product:
+            <br>
+            <select id="product">
+                <option>Product 1</option>
+                <option>Product 2</option>
+                <option>Product 3</option>
+            </select>
+        </label>
+        <label for="version">Version:*<br>
+            <input type="text" id="version" required>
+        </label>
+        <br>
+        <label>License:<br>
+            <input type="radio" name="licence">Free
+            <span style="float: right; margin-right: 30%"><input type="radio" name="licence">Bussiness</span>
+        </label>
+        <label for="severity">Severity:
+            <select id="severity"><br>
+                <option>Critical</option>
+                <option>Non Critical</option>
+                <option>Option 3</option>
+            </select>
+        </label>
+        <br>
+        <label for="attachment">Attachments:
+            <input type="file" id="attachment" required style="border: 1px solid rgb(205, 208, 210);">
+        </label><br>
+        <label for="Submit">Submit:
+    <div class="d">
+        <input type="submit" value="Send">
+    </div>
+        </label>
+    </div>
+
+</form>
+</body>
+</html>
