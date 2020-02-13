@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript">
+        function val()
+        {
+            let palindrome=prompt("Please enter the String to validate","");
+            if (palindrome!=null)
+            {
+                let arr = [];
+                let l = palindrome.length -1;
+                for(let i = l; i >= 0; i--)
+                {
+                    arr.push(palindrome[i]);
+                }
+                let rev_pal = arr.join("");
+
+                if (rev_pal !== palindrome){
+                    document.write("<h1>The string you entered is not palindrome.</h1>");
+                }
+
+                else {
+                    document.write("<h1>The string you entered is palindrome.</h1>");
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<form>
+    <input type="button" onclick="val()" value="Click Here For String validation !" style="margin-left:40%;margin-top: 50px">
+</form>
+</body>
+</html
