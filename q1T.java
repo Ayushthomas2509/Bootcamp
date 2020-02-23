@@ -1,19 +1,43 @@
-public class q1T extends Thread {
-   volatile int i=0;
+import java.util.Scanner;
 
-   public void run(){
-       i++;
+class process extends Thread {
+    public volatile boolean running = true;
 
-       System.out.println("The Value Is" + i);
+    public void run() {
+        while (running) {
+            System.out.println("Hello"
+            );
+            try {
+                Thread.sleep(400);
 
-   }
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
 
-   public static void main(String[] args) throws InterruptedException {
-       q1T q =new q1T();
-       Thread t1 = new Thread(q);
-       Thread t2 = new Thread(q);
-       t2.start();
-       t1.start();
-   }
+    }
+    public void Shutdown(){
+        running = false;
+    }
 }
+
+
+
+
+
+public class prac2 {
+
+    public static void main(String[] args) {
+        process p1 = new process();
+        p1.start();
+
+        System.out.println("Enter Key");
+        Scanner sc = new Scanner(System.in);
+        sc.nextLine();
+        p1.Shutdown();
+    }
+}
+
+
+
 
